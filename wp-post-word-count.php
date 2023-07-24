@@ -10,6 +10,12 @@
  * Text Domain: wp-post-word-count
  * Domain Path: /languages
  * License: GPL3
+ * License URI: https://www.gnu.org/licenses/gpl-3.0.html
+ * Requires at least: 5.0
+ * Requires PHP: 7.0
+ * Tested up to: 5.8
+ * Stable tag: 1.0.0
+ * Tags: post word count, word count, post reading time, post human time diff, post author name, post author avatar, post author link, post categories, post tags, post total views
  */
 
 if (!defined('ABSPATH')) {
@@ -235,7 +241,7 @@ function wp_post_word_count_the_content_tags($content){
 // the_content filter hook
 add_filter('the_content', 'wp_post_word_count_the_content_tags');
 
-// the_content total views  filter hook
+// the_content total comments  filter hook
 /**
  * @param $content
  * @return string
@@ -244,14 +250,13 @@ add_filter('the_content', 'wp_post_word_count_the_content_tags');
  * @filter the_content
  * @hook wp_post_word_count_the_content
  */
-function wp_post_word_count_the_content_total_views($content){
-    $total_views = get_post_meta(get_the_ID(), 'wp_post_word_count_total_views', true);
-    $label = __('Total Views', 'wp-post-word-count');
+function wp_post_word_count_the_content_total_comments($content){
+    $total_comments = get_comments_number();
+    $label = __('Total Comments', 'wp-post-word-count');
     $label = apply_filters('wp_post_word_count_label', $label);
-    $label = apply_filters('wp_post_word_count_total_views_label', $label);
-    $content .= sprintf('<p><strong>%s: </strong> %s</p>', $label, $total_views);
+    $label = apply_filters('wp_post_word_count_total_comments_label', $label);
+    $content .= sprintf('<p><strong>%s: </strong> %s</p>', $label, $total_comments);
     return $content;
 }
 // the_content filter hook
-add_filter('the_content', 'wp_post_word_count_the_content_total_views');
-
+add_filter('the_content', 'wp_post_word_count_the_content_total_comments');
