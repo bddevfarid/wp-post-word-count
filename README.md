@@ -1,6 +1,6 @@
 # Wp Post Word Count & Reading Time Plugin
 
-As of my last update in September 2021, I don't have specific information about a WordPress plugin called "WP Post Word Count & Reading Time." However, it is common for WordPress plugins to be developed and released regularly, so it's possible that such a plugin may have been created after my last update.
+As of my last update in July 2023, I don't have specific information about a WordPress plugin called "WP Post Word Count & Reading Time." However, it is common for WordPress plugins to be developed and released regularly, so it's possible that such a plugin may have been created after my last update.
 
 In general, WordPress offers a vast collection of plugins to enhance the functionality of websites. To find the plugin you mentioned, you can follow these steps:
 
