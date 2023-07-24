@@ -1,1 +1,1 @@
-# wp-post-word-count
+# Wp Post Word Count & Reading Time Plugin
